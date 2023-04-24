@@ -4,10 +4,10 @@ Teléfonos: 480px
 Tablets: 768px
 Laptop: 1140px
 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 
-:root {
-    --hFont: 'Kalam', cursive;  /* 400 */
-    --pFont: 'Lato', sans-serif;  /*300, 400 */
+:root {  /* 400 */
+    --pFont: 'Lato', sans-serif;  /*100, 400 */
 
     --white: #f4fff8;
     --black: #0f110c;
@@ -71,6 +71,7 @@ h4 {
 p {
     font-size: 1.4rem;
     font-family: var(--pFont);
+    font-weight: 300;
     letter-spacing: .08rem;
 }
 a {
@@ -103,4 +104,7 @@ a {
 }
 .nav-bar__a-p:hover {
     color: var(--purple);
+}
+.nav-bar__a-p:nth-child(1) > p {
+    font-weight: 400;
 }
