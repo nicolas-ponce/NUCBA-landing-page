@@ -19,12 +19,14 @@ Laptop: 1140px
 /* GLOBALES */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 html {
     font-size: 62.5%;
 }
 body {
-    background: var(--white);
+    background-color: var(--white);
     margin: 0;
 }
 .container {
@@ -55,6 +57,7 @@ h2,
 h3,
 h4 {
     font-family: var(--hFont);
+    color: var(--black);
 }
 h1 {
     font-size: 4.2rem;
@@ -73,10 +76,16 @@ p {
     font-family: var(--pFont);
     font-weight: 300;
     letter-spacing: .08rem;
+    line-height: 1.4;
 }
 a {
     text-decoration: none;
+    color: var(--black);
 }
+input {
+    color: var(--black);
+}
+
 
 /* NavBar */
 .nav-bar__shadow {
@@ -86,7 +95,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.4rem 0;
+    padding: 1.6rem 0;
 }
 
 .nav-bar__logo-img {
@@ -99,7 +108,6 @@ a {
     gap: 2.4rem;
 }
 .nav-bar__a-p {
-    color: var(--black);
     transition: .2s;
 }
 .nav-bar__a-p:hover {
@@ -107,4 +115,70 @@ a {
 }
 .nav-bar__a-p:nth-child(1) > p {
     font-weight: 400;
+}
+
+
+/* HERO */
+.hero-shadow {
+    box-shadow: inset 0 0rem 1.4rem -.2rem var(--gray);
+    background: rgb(244,255,248);
+    background: linear-gradient(90deg, rgba(244,255,248,1) 20%, rgba(250,255,250,1) 69%, rgba(255,255,255,1) 100%);
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 0;
+    gap: 8rem;
+}
+
+.hero__info-p {
+    margin: 3.6rem 0;
+    color: var(--black);
+}
+
+.hero__info-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.hero__info-buttons input {
+    padding: 1.2rem 3.2rem;
+    border: 0.05rem solid var(--purple);
+    border-radius: .4rem;
+    background-color: var(--white);
+    color: var(--purple);
+    cursor: pointer;
+    transition: .1s;
+}
+.hero__info-buttons input:hover {
+    background: var(--purple);
+    color: var(--white);
+}
+
+.hero__info-buttons input:last-child {
+    background-color: var(--purple);
+    color: var(--white);
+}
+.hero__info-buttons input:last-child:hover {
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+.hero__img {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* More info */
+
+.minfo-shadow {
+    box-shadow: 0 .2rem 1rem -.2rem var(--gray);
+}
+.minfo {
+    width: 60%;
+    text-align: center;
+    padding: 6rem 0;
+    margin-bottom: 2rem;
 }
