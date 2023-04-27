@@ -224,7 +224,8 @@ input {
 .minfo {
     box-shadow:  0 0 1.4rem -.2rem var(--gray);
     border-radius: 2rem;
-    background-color: var(--white);
+    background: rgb(244,255,248);
+    background: linear-gradient(90deg, rgba(244,255,248,1) 20%, rgba(250,255,250,1) 69%, rgba(255,255,255,1) 100%);
     width: 70%;
     text-align: center;
     padding: 4.8rem 8rem;
