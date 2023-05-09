@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página de entrega de ejercicios, Alumno: Nicolás Ponce, Escuela: NUCBA, 2023">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mqs.css">
     <title>E3 - Nicolas Ponce - NavBar</title>
 </head>
 <body>
@@ -20,11 +21,20 @@
                 <a class="nav-bar__a-p" href="#"><p>Clients</p></a>
                 <a class="nav-bar__a-p" href="#"><p>Contact</p></a>
             </div>
-            <div class="nav-bar__hamburger">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </div>
+            <label for="nav-bar__hamburger-check">
+                <div class="nav-bar__hamburger">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </div>
+            </label>
+            <input type="checkbox" id="nav-bar__hamburger-check" checked>
+            <div class="hamburger-list">
+                <a class="hamburger-list__a-p" href="index.html"><p>Home</p></a>
+                <a class="hamburger-list__a-p" href="#"><p>About me</p></a>
+                <a class="hamburger-list__a-p" href="#"><p>Clients</p></a>
+                <a class="hamburger-list__a-p" href="#"><p>Contact</p></a>
+        </div>
         </nav>
     </header>
     <main>
@@ -41,9 +51,33 @@
                 <img class="hero__img" src="assets/gif/programador.gif" alt="Programador programando"> 
             </div>
         </section>
+
         <section class="minfo-shadow">
             <div class="minfo container">
                 <p>Since I was a little kid, I always tried my best to make everyone feel accepted, and that's the main goal with my work. I understand this objective is as essential as every other component for a product/company to grow, and if you keep scrolling, you are probably aware of this too.</p>
+            </div>
+        </section>
+
+        <section class="cards container">
+            <h2>Professional Approaches </h2>
+            <p>The things that get my full attention and which I value the most  doing my work</p>
+
+            <div class="cards__card">
+                <div class="cards__card1">
+                    <img class="cards__card1-img" src="assets/logos/a11y.png" alt="web-accessibility-image">
+                    <h3>Accessibility</h3>
+                    <p>Could you imagine not being able to get certain services or visualizing a page only because you have a limitation that you can't control? Yeah, me neither</p>
+                </div>
+                <div class="cards__card2">
+                    <img class="cards__card2-img" src="assets/logos/user-psychology.png" alt="user-psychology-image">
+                    <h3>User Psychology</h3>
+                    <p>Why does the user take that direction? How does the Next Billion Users mindset change through time? What does user bias affect? Understanding the way of thinking of your user/client makes the difference between you and your competitor </p>
+                </div>
+                <div class="cards__card3">
+                    <img class="cards__card3-img" src="assets/logos/ux-design.png" alt="UX-Design-image">
+                    <h3>Attention to detail</h3>
+                    <p>The position of a button, the <span>Von Restorff Effect</span> and the least amount of distance the cursor needs to take. It's like what its said: <i>"You never notice a good design, only a bad one"</i></p>
+                </div>
             </div>
         </section>
     </main>
