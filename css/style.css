@@ -199,11 +199,11 @@ main {
     color: var(--white);
 }
 
-.hero__info-buttons-input:last-child {
+.hero__info-buttons a:last-child .hero__info-buttons-input:last-child {
     background-color: var(--purple);
     color: var(--white);
 }
-.hero__info-buttons-input:last-child:hover {
+.hero__info-buttons a:last-child .hero__info-buttons-input:last-child:hover {
     background-color: var(--white);
     color: var(--purple);
 }
