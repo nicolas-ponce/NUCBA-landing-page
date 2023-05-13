@@ -44,8 +44,13 @@
                     <h1 class="hero__info-h1">Front End Dev & UX Designer</h1>
                     <p class="hero__info-p">Hi! I'm a passionate <strong>Front-End Web Developer</strong> and an <strong>UX Designer</strong>, with a background as a Volunteer Firefighter! My designs are focused to people who cares about their users and wants to make their products feel accessible for all of them!</p>
                     <div class="hero__info-buttons">
-                        <input type="button" value="Learn More">
-                        <input type="button" value="Contact Me">
+                        <a href="#">
+                            <input class="hero__info-buttons-input" type="button" value="Learn More">
+                        </a>
+                        <a href="#contact-me">
+                            <input class="hero__info-buttons-input" type="button" value="Contact Me">
+                        </a>
+                        
                     </div>
                 </div>
                 <img class="hero__img" src="assets/gif/programador.gif" alt="Programador programando"> 
@@ -59,26 +64,77 @@
         </section>
 
         <section class="cards container">
-            <h2>Professional Approaches </h2>
-            <p>The things that get my full attention and which I value the most  doing my work</p>
-
-            <div class="cards__card">
-                <div class="cards__card1">
+            <div class="cards__info">
+                <h2>Professional Approaches </h2>
+                <p>The things that get my full attention and which I value the most  doing my work</p>
+            </div>
+            <div class="cards__container">
+                <div class="cards__card cards__card1">
                     <img class="cards__card1-img" src="assets/logos/a11y.png" alt="web-accessibility-image">
-                    <h3>Accessibility</h3>
-                    <p>Could you imagine not being able to get certain services or visualizing a page only because you have a limitation that you can't control? Yeah, me neither</p>
+                    <div class="cards__card-info">
+                        <h3>Accessibility</h3>
+                        <p>Some people cannot access certain services or visualize a page because they have a limitation that they can't control. Yeah, we should change this.</p>
+                    </div>
+
                 </div>
-                <div class="cards__card2">
+                <div class="cards__card cards__card2">
                     <img class="cards__card2-img" src="assets/logos/user-psychology.png" alt="user-psychology-image">
-                    <h3>User Psychology</h3>
-                    <p>Why does the user take that direction? How does the Next Billion Users mindset change through time? What does user bias affect? Understanding the way of thinking of your user/client makes the difference between you and your competitor </p>
+                    <div class="cards__card-info">
+                        <h3>User Psychology</h3>
+                        <p>Why does the user take that direction? How does the Next Billion Users mindset change through time? What does user bias affect? Understanding the way of thinking of your user/client makes the difference between you and your competitor.</p>  
+                    </div>
+
                 </div>
-                <div class="cards__card3">
+                <div class="cards__card cards__card3">
                     <img class="cards__card3-img" src="assets/logos/ux-design.png" alt="UX-Design-image">
-                    <h3>Attention to detail</h3>
-                    <p>The position of a button, the <span>Von Restorff Effect</span> and the least amount of distance the cursor needs to take. It's like what its said: <i>"You never notice a good design, only a bad one"</i></p>
+                    <div class="cards__card-info">
+                        <h3>Attention to detail</h3>
+                        <p>A button position, the <span>Von Restorff Effect</span> and the least amount of distance the cursor needs to take. It's like what its said: <i>"You never notice a good design, only a bad one"</i></p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="contact-me" class="contacts container">
+            <div class="contact contact__info">
+                <h2>Contact Me</h2>
+                <div class="contact__info-links">
+                    <h4>Buenos Aires, Argentina</h4>
+
+                    <div class="contact__info-links-a">
+                        <a href="mailto:nicolas.mponce@gmail.comSubject=Hi!%20I'm%20contacting%20you%20fro%20your%20web!">
+                            <img src="assets/logos/email-icon.gif" alt="email-icon.gif">
+                            <p>nicolas.mponce@gmail.com</p>
+                        </a>
+                        <a href="https://github.com/nicolas-ponce" target="_blank">
+                            <img src="assets/logos/github-icon.gif" alt="github-icon.gif">
+                            <p>nicolas-ponce</p>
+                        </a>
+                        <a href="https://www.instagram.com/nicolas_m_p_/" target="_blank">
+                            <img src="assets/logos/instagram-icon.gif" alt="instagram-icon.gif">
+                            <p>@nicolas_m_p_</p>
+                        </a>
+                        <a href="https://wa.me/5491132681501?text=Hi!%20I'm%20contacting%20you%20because" target="_blank">
+                            <img src="assets/logos/telephone-icon.gif" alt="telephone-icon.gif">
+                            <p>+54 9 11 3268-1501</p>
+                        </a>
+                    </div>
+                </div> <!-- contact__info-links -->
+            </div>
+
+            <form class="contact contact__info-form">
+                <h2>Send me a message!</h2>
+                <input class="contact__info-form-fill" type="text" placeholder="Your name...">
+                <input class="contact__info-form-fill" type="email" placeholder="Your email...">
+                <textarea class="contact__info-form-fill" placeholder="What do you want to know?.."></textarea>
+                <input class="contact__info-form-submitbtn" type="button" value="Send"> <!-- No uso type="submit" para que no se reinicie la página -->
+            </form>
+
+            <div class="contact contact__kitty">
+                <img class="contact__kitty-img" src="assets/gif/type-cat.gif" alt="typing-cat.gif">
+            </div>
+            
+
         </section>
     </main>
 </body>
