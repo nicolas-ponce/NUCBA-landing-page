@@ -55,6 +55,23 @@ Laptop: 980px
     .cards__card-info {
         display: block;
     }
+
+
+    .line {
+        width: 65%;
+    }
+
+    .contacts {
+        position: relative;
+    }
+    .contact {
+        width: 45%;
+    }
+
+    .contact__info-form {
+        order: 1;
+        width: 100%;
+    }
 }
 
 /* TABLETS */
@@ -86,6 +103,16 @@ Laptop: 980px
     .hamburger-list {
         display: block;
     }
+
+    .contact {
+        width: 100%;
+    }
+
+    .contact__kitty {
+        order: 1;
+        width: 60%;
+    }
+
 }
 
 /* MOBILE */
@@ -96,5 +123,10 @@ Laptop: 980px
 
     .minfo {
         padding: 3.2rem 3.2rem;
+    }
+
+    .contact__kitty {
+        order: 1;
+        width: 70%;
     }
 }

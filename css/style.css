@@ -18,11 +18,14 @@
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 14rem;
 }
 body {
     background: rgb(244,255,248);
     background: linear-gradient(90deg, rgba(244,255,248,1) 20%, rgba(250,255,250,1) 69%, rgba(255,255,255,1) 100%);
     margin: 0;
+    overflow-x: hidden;
 }
 .container {
     width: 80%;
@@ -76,6 +79,7 @@ ul {
     left: 0;
     right: 0;
     background-color: var(--white);
+    z-index: 10;
 }
 .nav-bar {
     display: flex;
@@ -163,15 +167,18 @@ ul {
 
 
 main {
-    margin-top: 8.4rem;
+    margin-top: 16rem;
 }
+
+
+
+
 /* HERO */
 
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8rem 0;
     gap: 4rem;
 }
 
@@ -179,6 +186,13 @@ main {
     margin: 3.6rem 0;
     color: var(--black);
 }
+.hero__info-p span {
+    text-decoration: underline;
+    border-radius: 20rem;
+}
+.hero__info-p span:hover {
+}
+
 
 .hero__info-buttons {
     display: flex;
@@ -214,6 +228,121 @@ main {
 }
 
 
+
+/* Firetruck Animation */
+
+.animated-lights {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12rem;
+    margin: auto;
+    width: 33%;
+    height: 2rem;
+    border-radius: 2rem;
+}
+.animated-lights2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 9rem;
+    margin: auto;
+    width: 40%;
+    height:10rem;
+    border-radius: 2rem;
+    background-color: #f8fff9;
+    transition: all .6s linear;
+}
+
+
+.exline {
+    position: absolute;
+    top: 30.3rem;
+    left: 13.3rem;
+    width: 11%;
+    height: 2rem;
+    background-color: rgba(0,0,0,0);
+}
+
+
+.fitr-animation__img {
+    width: 8%;
+    position: relative;
+    left: -9%;
+}
+
+.fitr-animation__line {
+    position: relative;
+    left: -200%;
+    width: 200%;
+    height: 0.1rem;
+    background-color: var(--gray);
+}
+
+.exline:hover ~ .fitr-animation__img {
+    animation: moving 2s 1.5s linear forwards;
+}
+
+.exline:hover ~ .fitr-animation__line {
+    display: block;
+    animation: path-construction 6s linear forwards;
+}
+
+.exline:hover ~ .animated-lights {
+    animation: red-blue-bkc .6s linear 8;
+}
+
+.exline:hover ~ .animated-lights2 {
+    background-color: rgba(0,0,0,0);
+    transition: all .6s linear;
+}
+
+
+
+
+
+
+@keyframes moving {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(120vw);
+    }
+}
+
+@keyframes path-construction {
+    0% {
+        transform: translate(0%);
+    }
+    100% {
+        transform: translate(200%);
+    }
+}
+
+@keyframes red-blue-bkc {
+    0% {
+        background-color: rgb(125, 149, 255);
+        box-shadow: 2px 2px 44px 5px rgba(125,149,255,0.75);
+        -webkit-box-shadow: 2px 2px 44px 5px rgba(125,149,255,0.75);
+        -moz-box-shadow: 2px 2px 44px 5px rgba(125,149,255,0.75);
+    }
+    50% {
+        background-color: rgb(255, 117, 117);
+        box-shadow: 2px 2px 44px 5px rgb(255, 117, 117);
+        -webkit-box-shadow: 2px 2px 44px 5px rgb(255, 117, 117);
+        -moz-box-shadow: 2px 2px 44px 5px rgb(255, 117, 117);
+    }
+    100% {
+        background-color: rgb(125, 149, 255);
+        box-shadow: 2px 2px 44px 5px rgba(125,149,255,0.75);
+        -webkit-box-shadow: 2px 2px 44px 5px rgba(125,149,255,0.75);
+        -moz-box-shadow: 2px 2px 44px 5px rgba(125,149,255,0.75);
+    }
+}
+
+
+
 /* More info */
 .minfo {
     box-shadow:  0 0 1.4rem -.2rem var(--gray);
@@ -223,7 +352,7 @@ main {
     width: 70%;
     text-align: center;
     padding: 4.8rem 8rem;
-    margin-bottom: 8rem;
+    margin: 2rem auto 10rem;
 }
 
 /* Cards */
@@ -248,7 +377,7 @@ main {
     align-items: stretch;
     justify-content: center;
     gap: 1.2rem;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 .cards__card {
@@ -274,17 +403,30 @@ main {
     margin-bottom: 0.8rem;
 }
 
+/* Line */
+.line {
+    background-color: var(--gray);
+    width: 55%;
+    height: 0.1rem;
+    margin: 0 auto;
+}
+
+
 
 /* Contact me */
 
 .contacts {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
     gap: 1.2rem;
+    margin-top: 6rem;
 }
 .contact {
-    width: 33%;
+    width: 32%;
+    padding: 0 2rem;
+    text-align: center;
 }
 .contact__kitty {
     display: flex;
@@ -293,9 +435,9 @@ main {
 }
 .contact__kitty-img {
     width: 100%;
-    height: 100%;
     object-fit: contain;
     border-radius: 0.4rem;
+    margin: 1rem 2rem;
 }
 
 .contact__info {
