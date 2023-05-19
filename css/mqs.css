@@ -113,6 +113,10 @@ Laptop: 980px
         width: 60%;
     }
 
+    .footer__tech-icons img {
+        width: 40%;
+    }
+
 }
 
 /* MOBILE */
@@ -129,4 +133,6 @@ Laptop: 980px
         order: 1;
         width: 70%;
     }
+
+
 }
